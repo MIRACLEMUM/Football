@@ -1,0 +1,21 @@
+export default function FilterTabs({ currentFilter, onFilterChange }) {
+  const filters = ['1X2', 'Over/Under 2.5', '1X2 Live', 'Half Time'];
+
+  return (
+    <div className="flex flex-wrap justify-center gap-3 mb-6">
+      {filters.map(filter => (
+        <button
+          key={filter}
+          onClick={() => onFilterChange(filter)}
+          className={`px-4 py-2 rounded-full text-sm font-semibold transition
+            ${currentFilter === filter
+              ? 'bg-primary text-black'
+              : 'bg-gray-700 text-white hover:bg-gray-600'}
+          `}
+        >
+          {filter}
+        </button>
+      ))}
+    </div>
+  );
+}

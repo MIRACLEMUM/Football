@@ -1,18 +1,25 @@
 [
   {
     "id": 1,
-    "home": "Al Ittihad Al Misrati",
-    "away": "Al Ittihad FC",
-    "date": "2025-06-24T20:00:00",
-    "prediction": "0-2",
-    "probabilities": { "1": 27, "X": 25, "2": 48 }
+    "homeTeam": "Al Ittihad Al Misrati",
+    "awayTeam": "Al Ittihad FC",
+    "date": "2025-06-24T20:00:00Z",
+    "probabilities": { "1": 27, "X": 25, "2": 48 },
+    "prediction": "2",
+    "score": "0 - 1",
+    "over25": 61,
+    "under25": 39,
+    "halfTime": "1"
   },
   {
     "id": 2,
-    "home": "SL Benfica",
-    "away": "Bayern Munich",
-    "date": "2025-06-24T20:00:00",
-    "prediction": "1-2",
-    "probabilities": { "1": 32, "X": 24, "2": 44 }
+    "homeTeam": "Auckland City",
+    "awayTeam": "Boca Juniors",
+    "date": "2025-06-24T20:00:00Z",
+    "probabilities": { "1": 18, "X": 30, "2": 52 },
+    "prediction": "2",
+    "over25": 72,
+    "under25": 28,
+    "halfTime": "X"
   }
 ]

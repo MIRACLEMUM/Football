@@ -1,21 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import BetSlip from './pages/BetSlip';
-import BottomNav from './components/BottomNav';
+import MatchList from './components/MatchList';
 
-function App() {
+export default function App() {
   return (
-    <Router>
-      <div className="font-sans bg-gray-100 min-h-screen pb-20">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/betslip" element={<BetSlip />} />
-        </Routes>
-
-        <BottomNav />
+    <div className="min-h-screen bg-secondary p-4">
+      <div className="max-w-5xl mx-auto">
+        <header className="text-center py-6 border-b border-gray-700 mb-4">
+          <h1 className="text-4xl font-bold text-primary">⚽ GoldBet</h1>
+          <p className="text-sm text-gray-400">AI-powered match predictions</p>
+        </header>
+        <MatchList />
       </div>
-    </Router>
+    </div>
   );
 }
-
 export default App;
