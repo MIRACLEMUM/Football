@@ -1,21 +1,25 @@
-// src/components/MatchCard.jsx
-import React from "react";
+export default function MatchCard({ match }) {
+  const time = new Date(match.date).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
-const MatchCard = ({ match }) => {
   return (
-    <div className="bg-white shadow-md rounded p-4">
-      <h3 className="text-lg font-semibold mb-2">{match.teams}</h3>
-      <p className="text-sm text-gray-600">{match.date} | {match.time}</p>
-      <div className="flex justify-between mt-3 text-sm">
-        <span>Home: {match.odds.home}</span>
-        <span>Draw: {match.odds.draw}</span>
-        <span>Away: {match.odds.away}</span>
+    <div className="bg-white p-4 rounded-xl shadow-md my-3">
+      <div className="flex justify-between items-center">
+        <div>
+          <h3 className="text-lg font-bold text-gray-800">{match.home} vs {match.away}</h3>
+          <p className="text-sm text-gray-500">Time: {time}</p>
+          <p className="text-sm text-green-600">Predicted: {match.prediction}</p>
+        </div>
+        <div className="flex gap-2">
+          {Object.entries(match.probabilities).map(([key, value]) => (
+            <button
+              key={key}
+              className="bg-blue-100 text-blue-700 px-3 py-1 rounded hover:bg-blue-200"
+            >
+              {key} - {value}%
+            </button>
+          ))}
+        </div>
       </div>
-      <button className="mt-4 w-full bg-green-600 text-white py-2 rounded">
-        Bet Now
-      </button>
     </div>
   );
-};
-
-export default MatchCard;
+}
